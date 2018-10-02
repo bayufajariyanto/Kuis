@@ -1,0 +1,15 @@
+<label>Masukkan Nama :</label>
+<input
+type ="text"
+class="form-control"
+[(ngModel)]="InputanName">
+<!--<p>{{ InputanName }}</p>-->
+<p>Hasil dari masukkan anda adalah : {{InputanName}}</p>
+<button
+ class ="btn btn-success"
+ [disabled]="InputanName===''"
+ (click)="onReset()">OK</button>
+<!--(click)="onCreationStatus()">Add Server</button>
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>-->

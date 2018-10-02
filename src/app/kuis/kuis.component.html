@@ -1,0 +1,52 @@
+<!-- <p>
+  kuis works!
+</p> -->
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Master Data</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <h2>Form Data Mahasiswa</h2>
+        <hr/>
+        <label for="nim">NIM</label>
+        <input type="text" name="nim" id="nim" class="form-control" [(ngModel)]="nim">
+        <label for="nim">Nama</label>
+        <input type="text" name="nama" id="nama" class="form-control" [(ngModel)]="nama">
+        <label for="nim">Kelas</label>
+        <input type="text" name="kelas" id="kelas" class="form-control" [(ngModel)]="kelas">
+        <br/>
+        <button class="btn btn-primary"(click)="tambahMhs()">Tambah Mahasiswa</button>
+      </div>
+      <div class="col">
+        <br>
+        <h2>Data Mahasiswa</h2>
+        <hr/>
+        
+        <div *ngFor="let panjang of daftarMhs">
+          <div class="card bg-light mb-3" style="max-width: 18rem;">
+            <div class="card-header">
+              <h4>{{ mhs.nama }}</h4>
+            </div>
+            <div class="card-body">
+              <h3>{{ mhs.nim }}</h3>
+              <p class="card-text">{{ mhs.kelas }}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
